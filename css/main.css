@@ -31,6 +31,9 @@ a {
   text-decoration: none;
 }
 
+textarea {
+  resize: none;
+}
 /* стили для index.html */
 
 /* header */
@@ -170,20 +173,37 @@ a {
   pointer-events: none;
 }
 
+/* Modal window */
+
 .modal {
   display: inline-flex;
   position: absolute;
-  margin: 0;
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-height: 581px;
-  min-width: 528px;
 
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+.form {
+  height: 581px;
+  width: 528px;
+
+  padding: 10px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.comment {
+  height: 120px;
 }
 
 .button-close {
