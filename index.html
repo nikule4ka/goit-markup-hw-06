@@ -444,37 +444,37 @@
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
       <form class="form">
-        <h2>Оставьте свои данные, мы вам перезвоним</h2>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
   
         <div class="form-field">
-          <label for="user-name">Имя</label>
-          <input type="text" name="user-name" id="user-name">
+          <label for="user-name" class="user-name">Имя</label>
+          <input type="text" name="user-name" id="user-name" class="modal-input">
         </div>
   
         <div class="form-field">
-          <label for="tel">Телефон</label>
-          <input type="tel" name="phone" id="tel">
+          <label for="tel" class="user-name">Телефон</label>
+          <input type="tel" name="phone" id="tel"  class="modal-input">
         </div>
   
         <div class="form-field">
-          <label for="mail">Почта</label>
-          <input type="email" name="mail" id="mail">
+          <label for="mail" class="user-name">Почта</label>
+          <input type="email" name="mail" id="mail"  class="modal-input">
         </div>
   
         <div class="form-field">
-          <label for="comment">Комментарий</label>
+          <label for="comment" class="user-name">Комментарий</label>
           <textarea name="comment" id="comment" placeholder="Введите текст" class="comment"></textarea>
         </div>
   
-        <div>
+        <div class="checkbox-label">
           <input type="checkbox" name="policy" id="policy">
-          <label for="policy" class="form-field">
+          <label for="policy" class="checkbox-title">
             Соглашаюсь с рассылкой и принимаю
-            <a href="">Условия договора</a>
+            <a href="" class="checkbox-policy">Условия договора</a>
           </label>
         </div>
   
-        <button type="submit">Отправить</button>
+        <button type="submit" class="btn-modal">Отправить</button>
   
       </form>
   
@@ -488,6 +488,22 @@
   </div>
   
 <script src="./js/modal.js"></script>
+
+<script>
+  (() => {
+    document
+      .querySelector('.js-speaker-form')
+      .addEventListener('submit', e => {
+        e.preventDefault();
+
+        new FormData(e.currentTarget).forEach((value, name) =>
+          console.log(`${name}: ${value}`),
+        );
+
+        e.currentTarget.reset();
+      });
+  })();
+</script>
 
 </body>
 
