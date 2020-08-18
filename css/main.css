@@ -809,7 +809,6 @@ textarea {
 .form-field:focus .comment,
 .form-field:hover .comment {
   border: 1px solid var(--accent-color);
-  outline: none;
 }
 
 .comment::placeholder {
@@ -882,6 +881,7 @@ textarea {
 .modal-input:hover + .icon-modal,
 .modal-input:focus + .icon-modal {
   fill: var(--accent-color);
+  outline: none;
 }
 
 .btn-modal {
