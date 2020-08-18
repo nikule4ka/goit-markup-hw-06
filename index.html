@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Web Studio</title>
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="./css/main.css" />
+  
 </head>
 
 <body>
@@ -505,21 +507,25 @@
 <script src="./js/modal.js"></script>
 
 <script>
-  (() => {
-    document
-      .querySelector('.js-speaker-form')
-      .addEventListener('submit', e => {
-        e.preventDefault();
+  const refs = {
+    openModalBtn: document.querySelector("[data-open-modal]"),
+    closeModalBtn: document.querySelector("[data-close-modal]"),
+    backdrop: document.querySelector("[data-backdrop]"),
+  }
 
-        new FormData(e.currentTarget).forEach((value, name) =>
-          console.log(`${name}: ${value}`),
-        );
+  refs.openModalBtn.addEventListener("click", toggleModal)
+  refs.closeModalBtn.addEventListener("click", toggleModal)
 
-        e.currentTarget.reset();
-      });
-  })();
+  refs.backdrop.addEventListener("click", logBackdropClick)
+
+  function toggleModal() {
+    refs.backdrop.classList.toggle("is-hidden")
+  }
+
+  function logBackdropClick() {
+    console.log("Это клик в бекдроп")
+  }
 </script>
-
 </body>
 
 </html>

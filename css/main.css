@@ -26,6 +26,13 @@ body {
   letter-spacing: 0.03em;
 }
 
+input:active,
+:hover,
+:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
 /* a classes */
 a {
   text-decoration: none;
@@ -147,6 +154,7 @@ textarea {
   border-radius: 4px;
   text-decoration: none;
   border: none;
+  outline: none;
 }
 
 .container-hero {
@@ -464,8 +472,6 @@ textarea {
   fill: var(--primary-white-color);
 }
 
-
-
 .button-footer .send {
   margin-left: 10px;
 }
@@ -562,15 +568,13 @@ textarea {
 }
 
 .footer-input:hover {
-  outline: none;
-  border: border: 1px solid rgba(255, 255, 255, 0.3);;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .button-footer {
-  /* margin-left: 360px; */
   width: 200px;
   height: 50px;
-  /* padding-left: 29px; */
+  padding-left: 29px;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -839,7 +843,6 @@ textarea {
 .comment:focus,
 .comment:hover {
   border: 1px solid var(--accent-color);
-  outline: none;
 }
 
 .comment::placeholder {
@@ -936,6 +939,10 @@ textarea {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+}
+
+.btn-modal:hover {
+  background-color: var(--primary-text-color);
 }
 
 .button-close {
