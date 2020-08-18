@@ -446,47 +446,46 @@
       <form class="form">
         <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
   
-        <div class="form-field">
-          <label for="user-name" class="user-name">Имя</label>
-          <input type="text" name="user-name" id="user-name" class="modal-input">
-          <svg class="icon-modal" width="12" height="12">
-            <use xlink:href="./images/sprite.svg#person-black"></use>
-          </svg>
-          
-        </div>
-  
-        <div class="form-field">
-          <label for="tel" class="user-name">Телефон</label>
-          <input type="tel" name="phone" id="tel"  class="modal-input">
+          <label class="form-field">
+            <span class="user-name">Имя</span>
+            <input type="text" name="user-name" class="modal-input">
+            <svg class="icon-modal" width="12" height="12">
+              <use xlink:href="./images/sprite.svg#person-black"></use>
+            </svg>
+          </label>
+        
+          <label class="form-field">
+          <span class="user-name">Телефон</span>
+          <input type="tel" name="phone" id="tel" class="modal-input">
           <svg class="icon-modal" width="12" height="12">
             <use xlink:href="./images/sprite.svg#phone-black"></use>
           </svg>
-        </div>
-  
-        <div class="form-field">
-          <label for="mail" class="user-name">Почта</label>
-          <input type="email" name="mail" id="mail"  class="modal-input">
-          <svg class="icon-modal" width="12" height="12">
-            <use  xlink:href="./images/sprite.svg#email-black"></use>
-          </svg>
-        </div>
-  
-        <div class="form-field">
-          <label for="comment" class="user-name">Комментарий</label>
-          <textarea name="comment" id="comment" placeholder="Введите текст" class="comment"></textarea>
-        </div>
-  
-        <div class="checkbox-label">
-          <input type="checkbox" name="policy" id="policy">
-          <label for="policy" class="checkbox-title">
-            Соглашаюсь с рассылкой и принимаю
-            <a href="" class="checkbox-policy">Условия договора</a>
           </label>
-        </div>
+      
+          <label class="form-field">
+            <span class="user-name">Почта</span>
+            <input type="email" name="mail" class="modal-input">
+            <svg class="icon-modal" width="12" height="12">
+              <use xlink:href="./images/sprite.svg#email-black"></use>
+            </svg>
+          </label>
+          
   
+        
+          <label class="form-field">
+           <span class="user-name">Комментарий</span>
+          <textarea name="comment" placeholder="Введите текст" class="comment"></textarea>
+          </label>
+
+          <label class="checkbox-label">
+            <input type="checkbox" name="policy">
+            <span class="checkbox-title">Соглашаюсь с рассылкой и принимаю</span>
+            <a href="" class="checkbox-policy"> Условия договора</a>
+          </label>
+        
         <button type="submit" class="btn-modal">Отправить</button>
   
-      </form>
+        </form>
   
       <button class="button-close" data-modal-close>
         <svg class="icon-close" width="18" height="18">
